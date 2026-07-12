@@ -135,7 +135,8 @@ collections and live iteration is roughly 13–27× native strong collection
 iteration. In exchange, adds avoid the iterable incumbents' linear scans and
 every weak collection has the same cleanup discipline.
 
-Raw machine metadata, bands, samples, and load are committed in `receipts/`.
+Machine metadata, interquartile bands, call counts, and load are committed in
+`receipts/`.
 
 ## Verification
 
@@ -161,4 +162,3 @@ npm install weak-collections
 ```
 
 MIT © Xyra Sinclair
-
