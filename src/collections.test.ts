@@ -47,6 +47,13 @@ describe('IterableWeakSet contract', () => {
             'IterableWeakSet member cannot be a registered symbol',
         )
     })
+
+    it('rejects local symbols with an honest message (valid ES2023 targets, excluded by scope)', () => {
+        const set = new IterableWeakSet<object>()
+        expect(() => set.add(Symbol('local') as never)).toThrow(
+            /valid weak targets in ES2023.*deliberately excludes/,
+        )
+    })
 })
 
 describe('IterableWeakMap contract', () => {

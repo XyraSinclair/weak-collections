@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url'
 import { execFileSync } from 'node:child_process'
 import { mkdirSync, writeFileSync } from 'node:fs'
 import { arch, cpus, loadavg, platform } from 'node:os'
@@ -118,7 +119,7 @@ if (candidate !== undefined) {
     const raw = Object.fromEntries(names.map((name) => [name, []]))
     for (const name of names) {
         for (let repetition = 0; repetition < repetitions; repetition++) {
-            const output = execFileSync(process.execPath, ['--expose-gc', import.meta.filename, '--case', name], {
+            const output = execFileSync(process.execPath, ['--expose-gc', fileURLToPath(import.meta.url), '--case', name], {
                 encoding: 'utf8',
             })
             raw[name].push(JSON.parse(output))

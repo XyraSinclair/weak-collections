@@ -136,7 +136,14 @@ iteration. In exchange, adds avoid the iterable incumbents' linear scans and
 every weak collection has the same cleanup discipline.
 
 Machine metadata, interquartile bands, call counts, and load are committed in
-`receipts/`.
+`receipts/` in the repository (receipts ship with the repo, not the npm
+tarball — regenerate with `npm run bench`).
+
+Two deliberate strictness divergences from the native collections: `has()`
+and `delete()` THROW on invalid weak targets (primitives) where native
+WeakSet/WeakMap return `false` — a type error in your program should not
+read as a clean miss; and local (unregistered) symbols, though valid weak
+targets in ES2023, are excluded in v0.1.
 
 ## Verification
 

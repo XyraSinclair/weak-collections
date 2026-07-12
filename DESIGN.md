@@ -67,6 +67,11 @@ cannot be presented again. A different later object, even with the same shape,
 gets a different ref. This is documented and tested rather than inventing an
 unobservable “new ref for the same dead target” state.
 
+One subclass corner is accepted: interning is per target, not per
+constructor, so `new Sub(t)` after `new IdemWeakRef(t)` returns the base
+instance (`instanceof Sub` is false for it). Idempotence is the identity
+contract; per-`new.target` interning would silently break it.
+
 ## Five design rules
 
 ### 1. One registry, one token, no dead shells
