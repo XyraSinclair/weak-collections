@@ -1,0 +1,54 @@
+{
+    "name": "weak-collections",
+    "version": "0.1.0",
+    "description": "Iterable weak sets and maps, plus a weak-value map, with finalization receipts and no dead WeakRef shells.",
+    "keywords": [
+        "weakref",
+        "weakmap",
+        "weakset",
+        "finalizationregistry",
+        "garbage-collection",
+        "iterable",
+        "weak-value",
+        "cache",
+        "data-structure"
+    ],
+    "license": "MIT",
+    "author": "Xyra Sinclair",
+    "type": "module",
+    "sideEffects": false,
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "default": "./dist/index.js"
+        }
+    },
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "DESIGN.md"
+    ],
+    "engines": {
+        "node": ">=18"
+    },
+    "scripts": {
+        "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+        "build": "npm run clean && tsc -p tsconfig.build.json",
+        "test": "vitest run",
+        "bench": "npm run build && BENCH=1 vitest run src/collections.bench.test.ts && npm run probe",
+        "probe": "npm run build && node --expose-gc probes/retention.mjs",
+        "prepack": "npm run build"
+    },
+    "devDependencies": {
+        "@types/node": "^24.0.0",
+        "cyclebench": "^0.1.0",
+        "heap-estimate": "file:../heap-estimate",
+        "iterable-weak-map": "^1.0.0",
+        "typescript": "^5.5.0",
+        "vitest": "^3.2.6",
+        "weak-value-map": "^1.0.1"
+    }
+}
+
