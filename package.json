@@ -46,9 +46,9 @@
         "cyclebench": "^0.1.0",
         "heap-estimate": "file:../heap-estimate",
         "iterable-weak-map": "^1.0.0",
+        "iterable-weak-set": "^1.0.4",
         "typescript": "^5.5.0",
         "vitest": "^3.2.6",
         "weak-value-map": "^1.0.1"
     }
 }
-

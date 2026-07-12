@@ -1,0 +1,840 @@
+{
+  "generatedAt": "2026-07-12T07:10:15.598Z",
+  "runtime": "v24.13.1",
+  "v8": "13.6.233.17-node.40",
+  "machine": "darwin-arm64 Apple M5 Max",
+  "loadAverage": [
+    14.69189453125,
+    11.68310546875,
+    10.904296875
+  ],
+  "operationsPerCall": 500,
+  "reports": {
+    "set add": {
+      "candidates": [
+        {
+          "name": "native WeakSet",
+          "isAsync": false,
+          "nsPerOp": 18275.29464286012,
+          "opsPerSec": 54718.68002908969,
+          "band": {
+            "q1": 16556.61068702352,
+            "med": 18275.29464286012,
+            "q3": 22938.636363636015
+          },
+          "calls": 12716,
+          "measuredMs": 300.51524700000164,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 18275.29464286012,
+              "band": {
+                "q1": 16556.61068702352,
+                "med": 18275.29464286012,
+                "q3": 22938.636363636015
+              },
+              "calls": 12716,
+              "measuredMs": 300.51524700000164
+            }
+          ],
+          "vsFastest": 1,
+          "tiedWithNext": false,
+          "agrees": true
+        },
+        {
+          "name": "weak-collections",
+          "isAsync": false,
+          "nsPerOp": 179802.0833333377,
+          "opsPerSec": 5561.670818608288,
+          "band": {
+            "q1": 160810.2222222543,
+            "med": 179802.0833333377,
+            "q3": 208902.74999999293
+          },
+          "calls": 1365,
+          "measuredMs": 301.113082000001,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 179802.0833333377,
+              "band": {
+                "q1": 160810.2222222543,
+                "med": 179802.0833333377,
+                "q3": 208902.74999999293
+              },
+              "calls": 1365,
+              "measuredMs": 301.113082000001
+            }
+          ],
+          "vsFastest": 9.838532666480628,
+          "tiedWithNext": false,
+          "agrees": true
+        },
+        {
+          "name": "iterable-weak-set",
+          "isAsync": false,
+          "nsPerOp": 5351583.000000119,
+          "opsPerSec": 186.86059806976323,
+          "band": {
+            "q1": 5120187.499999929,
+            "med": 5351583.000000119,
+            "q3": 5702312.5000000615
+          },
+          "calls": 55,
+          "measuredMs": 301.0554600000005,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 5351583.000000119,
+              "band": {
+                "q1": 5120187.499999929,
+                "med": 5351583.000000119,
+                "q3": 5702312.5000000615
+              },
+              "calls": 55,
+              "measuredMs": 301.0554600000005
+            }
+          ],
+          "vsFastest": 292.83155782612243,
+          "tiedWithNext": false,
+          "agrees": true
+        }
+      ],
+      "inputCount": 1,
+      "floorNs": 7.896853395379685,
+      "disagreements": [],
+      "ok": true
+    },
+    "set has": {
+      "candidates": [
+        {
+          "name": "native WeakSet",
+          "isAsync": false,
+          "nsPerOp": 4368.055555555152,
+          "opsPerSec": 228934.81717013245,
+          "band": {
+            "q1": 4033.787815126002,
+            "med": 4368.055555555152,
+            "q3": 4805.934873949442
+          },
+          "calls": 64830,
+          "measuredMs": 301.58625100000063,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 4368.055555555152,
+              "band": {
+                "q1": 4033.787815126002,
+                "med": 4368.055555555152,
+                "q3": 4805.934873949442
+              },
+              "calls": 64830,
+              "measuredMs": 301.58625100000063
+            }
+          ],
+          "vsFastest": 1,
+          "tiedWithNext": false,
+          "agrees": true
+        },
+        {
+          "name": "weak-collections",
+          "isAsync": false,
+          "nsPerOp": 11333.56036798173,
+          "opsPerSec": 88233.52658226313,
+          "band": {
+            "q1": 10706.714611871543,
+            "med": 11333.56036798173,
+            "q3": 12352.276322855583
+          },
+          "calls": 25305,
+          "measuredMs": 300.6910799999987,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 11333.56036798173,
+              "band": {
+                "q1": 10706.714611871543,
+                "med": 11333.56036798173,
+                "q3": 12352.276322855583
+              },
+              "calls": 25305,
+              "measuredMs": 300.6910799999987
+            }
+          ],
+          "vsFastest": 2.5946465707305566,
+          "tiedWithNext": false,
+          "agrees": true
+        },
+        {
+          "name": "iterable-weak-set",
+          "isAsync": false,
+          "nsPerOp": 5117666.0000001,
+          "opsPerSec": 195.40157564014152,
+          "band": {
+            "q1": 4834062.00000013,
+            "med": 5117666.0000001,
+            "q3": 5311791.999999968
+          },
+          "calls": 59,
+          "measuredMs": 302.2903730000012,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 5117666.0000001,
+              "band": {
+                "q1": 4834062.00000013,
+                "med": 5117666.0000001,
+                "q3": 5311791.999999968
+              },
+              "calls": 59,
+              "measuredMs": 302.2903730000012
+            }
+          ],
+          "vsFastest": 1171.6119300478258,
+          "tiedWithNext": false,
+          "agrees": true
+        }
+      ],
+      "inputCount": 1,
+      "floorNs": 7.5130462646472855,
+      "disagreements": [],
+      "ok": true
+    },
+    "set iteration": {
+      "candidates": [
+        {
+          "name": "native Set",
+          "isAsync": false,
+          "nsPerOp": 1361.2121111847418,
+          "opsPerSec": 734639.3642719223,
+          "band": {
+            "q1": 1282.4809951628374,
+            "med": 1361.2121111847418,
+            "q3": 1504.7143747057276
+          },
+          "calls": 183093,
+          "measuredMs": 300.8078719999962,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 1361.2121111847418,
+              "band": {
+                "q1": 1282.4809951628374,
+                "med": 1361.2121111847418,
+                "q3": 1504.7143747057276
+              },
+              "calls": 183093,
+              "measuredMs": 300.8078719999962
+            }
+          ],
+          "vsFastest": 1,
+          "tiedWithNext": false,
+          "agrees": true
+        },
+        {
+          "name": "iterable-weak-set",
+          "isAsync": false,
+          "nsPerOp": 34450.48701298349,
+          "opsPerSec": 29027.165845961077,
+          "band": {
+            "q1": 31858.82421149331,
+            "med": 34450.48701298349,
+            "q3": 40159.867346933795
+          },
+          "calls": 7156,
+          "measuredMs": 300.51962299999377,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 34450.48701298349,
+              "band": {
+                "q1": 31858.82421149331,
+                "med": 34450.48701298349,
+                "q3": 40159.867346933795
+              },
+              "calls": 7156,
+              "measuredMs": 300.51962299999377
+            }
+          ],
+          "vsFastest": 25.308683878076305,
+          "tiedWithNext": true,
+          "agrees": true
+        },
+        {
+          "name": "weak-collections",
+          "isAsync": false,
+          "nsPerOp": 36831.292682929816,
+          "opsPerSec": 27150.825484424815,
+          "band": {
+            "q1": 34108.909090904985,
+            "med": 36831.292682929816,
+            "q3": 41129.048780487385
+          },
+          "calls": 7241,
+          "measuredMs": 300.07358699999713,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 36831.292682929816,
+              "band": {
+                "q1": 34108.909090904985,
+                "med": 36831.292682929816,
+                "q3": 41129.048780487385
+              },
+              "calls": 7241,
+              "measuredMs": 300.07358699999713
+            }
+          ],
+          "vsFastest": 27.057717441900664,
+          "tiedWithNext": false,
+          "agrees": true
+        }
+      ],
+      "inputCount": 1,
+      "floorNs": 6.889026641846222,
+      "disagreements": [],
+      "ok": true
+    },
+    "map set": {
+      "candidates": [
+        {
+          "name": "native WeakMap",
+          "isAsync": false,
+          "nsPerOp": 16161.556603767063,
+          "opsPerSec": 61875.228018996146,
+          "band": {
+            "q1": 15052.155555558445,
+            "med": 16161.556603767063,
+            "q3": 17849.264705885205
+          },
+          "calls": 15961,
+          "measuredMs": 303.4628670000102,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 16161.556603767063,
+              "band": {
+                "q1": 15052.155555558445,
+                "med": 16161.556603767063,
+                "q3": 17849.264705885205
+              },
+              "calls": 15961,
+              "measuredMs": 303.4628670000102
+            }
+          ],
+          "vsFastest": 1,
+          "tiedWithNext": false,
+          "agrees": true
+        },
+        {
+          "name": "weak-collections",
+          "isAsync": false,
+          "nsPerOp": 180652.7499999978,
+          "opsPerSec": 5535.481746057075,
+          "band": {
+            "q1": 166630.01704540648,
+            "med": 180652.7499999978,
+            "q3": 194467.04166663648
+          },
+          "calls": 1565,
+          "measuredMs": 300.4955809999992,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 180652.7499999978,
+              "band": {
+                "q1": 166630.01704540648,
+                "med": 180652.7499999978,
+                "q3": 194467.04166663648
+              },
+              "calls": 1565,
+              "measuredMs": 300.4955809999992
+            }
+          ],
+          "vsFastest": 11.17793009850857,
+          "tiedWithNext": false,
+          "agrees": true
+        },
+        {
+          "name": "iterable-weak-map",
+          "isAsync": false,
+          "nsPerOp": 5430416.499999865,
+          "opsPerSec": 184.14793782392655,
+          "band": {
+            "q1": 5119010.999999773,
+            "med": 5430416.499999865,
+            "q3": 5698187.750000216
+          },
+          "calls": 56,
+          "measuredMs": 306.0067879999988,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 5430416.499999865,
+              "band": {
+                "q1": 5119010.999999773,
+                "med": 5430416.499999865,
+                "q3": 5698187.750000216
+              },
+              "calls": 56,
+              "measuredMs": 306.0067879999988
+            }
+          ],
+          "vsFastest": 336.00825917561065,
+          "tiedWithNext": false,
+          "agrees": true
+        }
+      ],
+      "inputCount": 1,
+      "floorNs": 7.118305206298137,
+      "disagreements": [],
+      "ok": true
+    },
+    "map get": {
+      "candidates": [
+        {
+          "name": "iterable-weak-map",
+          "isAsync": false,
+          "nsPerOp": 4491.490945674668,
+          "opsPerSec": 222643.21849808152,
+          "band": {
+            "q1": 4234.805331992777,
+            "med": 4491.490945674668,
+            "q3": 4855.361167003168
+          },
+          "calls": 65560,
+          "measuredMs": 300.4957590000049,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 4491.490945674668,
+              "band": {
+                "q1": 4234.805331992777,
+                "med": 4491.490945674668,
+                "q3": 4855.361167003168
+              },
+              "calls": 65560,
+              "measuredMs": 300.4957590000049
+            }
+          ],
+          "vsFastest": 1,
+          "tiedWithNext": true,
+          "agrees": true
+        },
+        {
+          "name": "native WeakMap",
+          "isAsync": false,
+          "nsPerOp": 4527.867088608552,
+          "opsPerSec": 220854.539329534,
+          "band": {
+            "q1": 4244.98945147529,
+            "med": 4527.867088608552,
+            "q3": 4920.447257384077
+          },
+          "calls": 64118,
+          "measuredMs": 301.6475489999957,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 4527.867088608552,
+              "band": {
+                "q1": 4244.98945147529,
+                "med": 4527.867088608552,
+                "q3": 4920.447257384077
+              },
+              "calls": 64118,
+              "measuredMs": 301.6475489999957
+            }
+          ],
+          "vsFastest": 1.0080989015393462,
+          "tiedWithNext": false,
+          "agrees": true
+        },
+        {
+          "name": "weak-collections",
+          "isAsync": false,
+          "nsPerOp": 11029.27927928118,
+          "opsPerSec": 90667.75576882245,
+          "band": {
+            "q1": 10448.945945943311,
+            "med": 11029.27927928118,
+            "q3": 12185.063063059732
+          },
+          "calls": 25020,
+          "measuredMs": 300.47213600000214,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 11029.27927928118,
+              "band": {
+                "q1": 10448.945945943311,
+                "med": 11029.27927928118,
+                "q3": 12185.063063059732
+              },
+              "calls": 25020,
+              "measuredMs": 300.47213600000214
+            }
+          ],
+          "vsFastest": 2.4555942364533627,
+          "tiedWithNext": false,
+          "agrees": true
+        }
+      ],
+      "inputCount": 1,
+      "floorNs": 7.49635488556925,
+      "disagreements": [],
+      "ok": true
+    },
+    "map iteration": {
+      "candidates": [
+        {
+          "name": "native Map",
+          "isAsync": false,
+          "nsPerOp": 2559.5512048183477,
+          "opsPerSec": 390693.49271759164,
+          "band": {
+            "q1": 2384.3493975903816,
+            "med": 2559.5512048183477,
+            "q3": 2873.30572289138
+          },
+          "calls": 112216,
+          "measuredMs": 300.3067089999904,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 2559.5512048183477,
+              "band": {
+                "q1": 2384.3493975903816,
+                "med": 2559.5512048183477,
+                "q3": 2873.30572289138
+              },
+              "calls": 112216,
+              "measuredMs": 300.3067089999904
+            }
+          ],
+          "vsFastest": 1,
+          "tiedWithNext": false,
+          "agrees": true
+        },
+        {
+          "name": "weak-collections",
+          "isAsync": false,
+          "nsPerOp": 46877.04878049372,
+          "opsPerSec": 21332.40095131833,
+          "band": {
+            "q1": 43312.000000008906,
+            "med": 46877.04878049372,
+            "q3": 50045.73170729755
+          },
+          "calls": 6249,
+          "measuredMs": 301.085916,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 46877.04878049372,
+              "band": {
+                "q1": 43312.000000008906,
+                "med": 46877.04878049372,
+                "q3": 50045.73170729755
+              },
+              "calls": 6249,
+              "measuredMs": 301.085916
+            }
+          ],
+          "vsFastest": 18.31455791634401,
+          "tiedWithNext": false,
+          "agrees": true
+        },
+        {
+          "name": "iterable-weak-map",
+          "isAsync": false,
+          "nsPerOp": 58830.482758633574,
+          "opsPerSec": 16997.990720265618,
+          "band": {
+            "q1": 55767.24137931862,
+            "med": 58830.482758633574,
+            "q3": 65038.96774193568
+          },
+          "calls": 4889,
+          "measuredMs": 300.30966499999977,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 58830.482758633574,
+              "band": {
+                "q1": 55767.24137931862,
+                "med": 58830.482758633574,
+                "q3": 65038.96774193568
+              },
+              "calls": 4889,
+              "measuredMs": 300.30966499999977
+            }
+          ],
+          "vsFastest": 22.984686787232604,
+          "tiedWithNext": false,
+          "agrees": true
+        }
+      ],
+      "inputCount": 1,
+      "floorNs": 7.298786163328214,
+      "disagreements": [],
+      "ok": true
+    },
+    "weak-value set": {
+      "candidates": [
+        {
+          "name": "native Map",
+          "isAsync": false,
+          "nsPerOp": 14837.500000001975,
+          "opsPerSec": 67396.79865205505,
+          "band": {
+            "q1": 12873.783305857389,
+            "med": 14837.500000001975,
+            "q3": 24035.847408624028
+          },
+          "calls": 13260,
+          "measuredMs": 302.63892099999794,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 14837.500000001975,
+              "band": {
+                "q1": 12873.783305857389,
+                "med": 14837.500000001975,
+                "q3": 24035.847408624028
+              },
+              "calls": 13260,
+              "measuredMs": 302.63892099999794
+            }
+          ],
+          "vsFastest": 1,
+          "tiedWithNext": false,
+          "agrees": true
+        },
+        {
+          "name": "weak-collections",
+          "isAsync": false,
+          "nsPerOp": 147333.50000005885,
+          "opsPerSec": 6787.3226387725845,
+          "band": {
+            "q1": 132666.68749997736,
+            "med": 147333.50000005885,
+            "q3": 202540.29807685688
+          },
+          "calls": 1244,
+          "measuredMs": 301.2279509999953,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 147333.50000005885,
+              "band": {
+                "q1": 132666.68749997736,
+                "med": 147333.50000005885,
+                "q3": 202540.29807685688
+              },
+              "calls": 1244,
+              "measuredMs": 301.2279509999953
+            }
+          ],
+          "vsFastest": 9.92980623420652,
+          "tiedWithNext": false,
+          "agrees": true
+        },
+        {
+          "name": "weak-value-map",
+          "isAsync": false,
+          "nsPerOp": 242954.09999995172,
+          "opsPerSec": 4116.003804834735,
+          "band": {
+            "q1": 203450.49999991717,
+            "med": 242954.09999995172,
+            "q3": 297055.5833330763
+          },
+          "calls": 511,
+          "measuredMs": 300.4512929999855,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 242954.09999995172,
+              "band": {
+                "q1": 203450.49999991717,
+                "med": 242954.09999995172,
+                "q3": 297055.5833330763
+              },
+              "calls": 511,
+              "measuredMs": 300.4512929999855
+            }
+          ],
+          "vsFastest": 16.374328559387994,
+          "tiedWithNext": false,
+          "agrees": true
+        }
+      ],
+      "inputCount": 1,
+      "floorNs": 7.448410461297616,
+      "disagreements": [],
+      "ok": true
+    },
+    "weak-value get": {
+      "candidates": [
+        {
+          "name": "native Map",
+          "isAsync": false,
+          "nsPerOp": 4529.909090909755,
+          "opsPerSec": 220754.98203853954,
+          "band": {
+            "q1": 4291.1136363617325,
+            "med": 4529.909090909755,
+            "q3": 5068.892045456282
+          },
+          "calls": 63888,
+          "measuredMs": 301.40832700000647,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 4529.909090909755,
+              "band": {
+                "q1": 4291.1136363617325,
+                "med": 4529.909090909755,
+                "q3": 5068.892045456282
+              },
+              "calls": 63888,
+              "measuredMs": 301.40832700000647
+            }
+          ],
+          "vsFastest": 1,
+          "tiedWithNext": false,
+          "agrees": true
+        },
+        {
+          "name": "weak-collections",
+          "isAsync": false,
+          "nsPerOp": 21427.419354861948,
+          "opsPerSec": 46669.175762087136,
+          "band": {
+            "q1": 19845.088709688196,
+            "med": 21427.419354861948,
+            "q3": 24189.854838720836
+          },
+          "calls": 13330,
+          "measuredMs": 300.24407699999574,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 21427.419354861948,
+              "band": {
+                "q1": 19845.088709688196,
+                "med": 21427.419354861948,
+                "q3": 24189.854838720836
+              },
+              "calls": 13330,
+              "measuredMs": 300.24407699999574
+            }
+          ],
+          "vsFastest": 4.730209574814804,
+          "tiedWithNext": false,
+          "agrees": true
+        },
+        {
+          "name": "weak-value-map",
+          "isAsync": false,
+          "nsPerOp": 257249.9999999612,
+          "opsPerSec": 3887.2691933922288,
+          "band": {
+            "q1": 238152.83333351545,
+            "med": 257249.9999999612,
+            "q3": 286965.33333337965
+          },
+          "calls": 1110,
+          "measuredMs": 300.4975059999924,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 257249.9999999612,
+              "band": {
+                "q1": 238152.83333351545,
+                "med": 257249.9999999612,
+                "q3": 286965.33333337965
+              },
+              "calls": 1110,
+              "measuredMs": 300.4975059999924
+            }
+          ],
+          "vsFastest": 56.78921912940574,
+          "tiedWithNext": false,
+          "agrees": true
+        }
+      ],
+      "inputCount": 1,
+      "floorNs": 7.337409973141861,
+      "disagreements": [],
+      "ok": true
+    },
+    "weak-value iteration": {
+      "candidates": [
+        {
+          "name": "native Map",
+          "isAsync": false,
+          "nsPerOp": 3170.6104368933084,
+          "opsPerSec": 315396.67830647784,
+          "band": {
+            "q1": 2839.299757282594,
+            "med": 3170.6104368933084,
+            "q3": 3519.6666666670353
+          },
+          "calls": 83256,
+          "measuredMs": 300.59678800000256,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 3170.6104368933084,
+              "band": {
+                "q1": 2839.299757282594,
+                "med": 3170.6104368933084,
+                "q3": 3519.6666666670353
+              },
+              "calls": 83256,
+              "measuredMs": 300.59678800000256
+            }
+          ],
+          "vsFastest": 1,
+          "tiedWithNext": false,
+          "agrees": true
+        },
+        {
+          "name": "weak-collections",
+          "isAsync": false,
+          "nsPerOp": 42490.19607843865,
+          "opsPerSec": 23534.840793720014,
+          "band": {
+            "q1": 38956.3447712652,
+            "med": 42490.19607843865,
+            "q3": 46859.27941178378
+          },
+          "calls": 6169,
+          "measuredMs": 301.17283299999144,
+          "perInput": [
+            {
+              "inputIndex": 0,
+              "nsPerOp": 42490.19607843865,
+              "band": {
+                "q1": 38956.3447712652,
+                "med": 42490.19607843865,
+                "q3": 46859.27941178378
+              },
+              "calls": 6169,
+              "measuredMs": 301.17283299999144
+            }
+          ],
+          "vsFastest": 13.401266703730482,
+          "tiedWithNext": false,
+          "agrees": true
+        }
+      ],
+      "inputCount": 1,
+      "floorNs": 7.1625321514669675,
+      "disagreements": [],
+      "ok": true
+    }
+  }
+}

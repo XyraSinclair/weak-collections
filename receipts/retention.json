@@ -1,0 +1,237 @@
+{
+  "generatedAt": "2026-07-12T07:12:50.991Z",
+  "runtime": "v24.13.1",
+  "v8": "13.6.233.17-node.40",
+  "machine": "darwin-arm64 Apple M5 Max",
+  "loadAverage": [
+    18.86083984375,
+    13.787109375,
+    11.84326171875
+  ],
+  "deadMembers": 20000,
+  "repetitions": 5,
+  "results": [
+    {
+      "candidate": "IterableWeakSet",
+      "finalized": 20000,
+      "shellCount": 0,
+      "heapEstimateBytes": 344,
+      "processHeapDeltaBytes": 1600496
+    },
+    {
+      "candidate": "IterableWeakMap",
+      "finalized": 20000,
+      "shellCount": 0,
+      "heapEstimateBytes": 384,
+      "processHeapDeltaBytes": 2125312
+    },
+    {
+      "candidate": "iterable-weak-map",
+      "finalized": 20000,
+      "shellCount": 20000,
+      "heapEstimateBytes": 1135536,
+      "processHeapDeltaBytes": 1839904
+    },
+    {
+      "candidate": "WeakValueMap",
+      "finalized": 20000,
+      "shellCount": 0,
+      "heapEstimateBytes": 256,
+      "processHeapDeltaBytes": 1075864
+    },
+    {
+      "candidate": "weak-value-map",
+      "finalized": 20000,
+      "shellCount": null,
+      "heapEstimateBytes": 24,
+      "processHeapDeltaBytes": 68328
+    }
+  ],
+  "raw": {
+    "IterableWeakSet": [
+      {
+        "candidate": "IterableWeakSet",
+        "finalized": 20000,
+        "shellCount": 0,
+        "heapEstimateBytes": 344,
+        "processHeapDeltaBytes": 1599560
+      },
+      {
+        "candidate": "IterableWeakSet",
+        "finalized": 20000,
+        "shellCount": 0,
+        "heapEstimateBytes": 344,
+        "processHeapDeltaBytes": 1600496
+      },
+      {
+        "candidate": "IterableWeakSet",
+        "finalized": 20000,
+        "shellCount": 0,
+        "heapEstimateBytes": 344,
+        "processHeapDeltaBytes": 1599560
+      },
+      {
+        "candidate": "IterableWeakSet",
+        "finalized": 20000,
+        "shellCount": 0,
+        "heapEstimateBytes": 344,
+        "processHeapDeltaBytes": 1600496
+      },
+      {
+        "candidate": "IterableWeakSet",
+        "finalized": 20000,
+        "shellCount": 0,
+        "heapEstimateBytes": 344,
+        "processHeapDeltaBytes": 1600496
+      }
+    ],
+    "IterableWeakMap": [
+      {
+        "candidate": "IterableWeakMap",
+        "finalized": 20000,
+        "shellCount": 0,
+        "heapEstimateBytes": 384,
+        "processHeapDeltaBytes": 2124376
+      },
+      {
+        "candidate": "IterableWeakMap",
+        "finalized": 20000,
+        "shellCount": 0,
+        "heapEstimateBytes": 384,
+        "processHeapDeltaBytes": 2125312
+      },
+      {
+        "candidate": "IterableWeakMap",
+        "finalized": 20000,
+        "shellCount": 0,
+        "heapEstimateBytes": 384,
+        "processHeapDeltaBytes": 2124376
+      },
+      {
+        "candidate": "IterableWeakMap",
+        "finalized": 20000,
+        "shellCount": 0,
+        "heapEstimateBytes": 384,
+        "processHeapDeltaBytes": 2125312
+      },
+      {
+        "candidate": "IterableWeakMap",
+        "finalized": 20000,
+        "shellCount": 0,
+        "heapEstimateBytes": 384,
+        "processHeapDeltaBytes": 2125312
+      }
+    ],
+    "iterable-weak-map": [
+      {
+        "candidate": "iterable-weak-map",
+        "finalized": 20000,
+        "shellCount": 20000,
+        "heapEstimateBytes": 1135536,
+        "processHeapDeltaBytes": 1839904
+      },
+      {
+        "candidate": "iterable-weak-map",
+        "finalized": 20000,
+        "shellCount": 20000,
+        "heapEstimateBytes": 1135536,
+        "processHeapDeltaBytes": 1839904
+      },
+      {
+        "candidate": "iterable-weak-map",
+        "finalized": 20000,
+        "shellCount": 20000,
+        "heapEstimateBytes": 1135536,
+        "processHeapDeltaBytes": 1839904
+      },
+      {
+        "candidate": "iterable-weak-map",
+        "finalized": 20000,
+        "shellCount": 20000,
+        "heapEstimateBytes": 1135536,
+        "processHeapDeltaBytes": 1840032
+      },
+      {
+        "candidate": "iterable-weak-map",
+        "finalized": 20000,
+        "shellCount": 20000,
+        "heapEstimateBytes": 1135536,
+        "processHeapDeltaBytes": 1839904
+      }
+    ],
+    "WeakValueMap": [
+      {
+        "candidate": "WeakValueMap",
+        "finalized": 20000,
+        "shellCount": 0,
+        "heapEstimateBytes": 256,
+        "processHeapDeltaBytes": 1075864
+      },
+      {
+        "candidate": "WeakValueMap",
+        "finalized": 20000,
+        "shellCount": 0,
+        "heapEstimateBytes": 256,
+        "processHeapDeltaBytes": 1076800
+      },
+      {
+        "candidate": "WeakValueMap",
+        "finalized": 20000,
+        "shellCount": 0,
+        "heapEstimateBytes": 256,
+        "processHeapDeltaBytes": 1075864
+      },
+      {
+        "candidate": "WeakValueMap",
+        "finalized": 20000,
+        "shellCount": 0,
+        "heapEstimateBytes": 256,
+        "processHeapDeltaBytes": 1076728
+      },
+      {
+        "candidate": "WeakValueMap",
+        "finalized": 20000,
+        "shellCount": 0,
+        "heapEstimateBytes": 256,
+        "processHeapDeltaBytes": 1075864
+      }
+    ],
+    "weak-value-map": [
+      {
+        "candidate": "weak-value-map",
+        "finalized": 20000,
+        "shellCount": null,
+        "heapEstimateBytes": 24,
+        "processHeapDeltaBytes": 68328
+      },
+      {
+        "candidate": "weak-value-map",
+        "finalized": 20000,
+        "shellCount": null,
+        "heapEstimateBytes": 24,
+        "processHeapDeltaBytes": 68328
+      },
+      {
+        "candidate": "weak-value-map",
+        "finalized": 20000,
+        "shellCount": null,
+        "heapEstimateBytes": 24,
+        "processHeapDeltaBytes": 68328
+      },
+      {
+        "candidate": "weak-value-map",
+        "finalized": 20000,
+        "shellCount": null,
+        "heapEstimateBytes": 24,
+        "processHeapDeltaBytes": 68328
+      },
+      {
+        "candidate": "weak-value-map",
+        "finalized": 20000,
+        "shellCount": null,
+        "heapEstimateBytes": 24,
+        "processHeapDeltaBytes": 68328
+      }
+    ]
+  }
+}
