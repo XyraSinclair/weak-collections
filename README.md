@@ -92,8 +92,9 @@ keys are held normally.
 
 `npm run probe` drops 20,000 targets, forces GC, waits for both the observer and
 collection registries, then records five isolated processes. `heap-estimate`
-walks JavaScript-visible retained graphs; `process.memoryUsage().heapUsed` is
-the ground truth that also sees opaque V8/native bookkeeping.
+walks JavaScript-visible retained graphs; `process.memoryUsage().heapUsed`
+adds a process-level signal that includes opaque V8 bookkeeping but also GC
+and allocator noise.
 
 Measured on Node 24.13.1 / V8 13.6, Apple M5 Max, 2026-07-12. Load average at
 receipt write was 18.86 / 13.79 / 11.84, so ratios and retention classes matter
@@ -107,12 +108,12 @@ more than fine-grained absolute timing.
 | `WeakValueMap` | 20,000 / 20,000 | **0** | 256 B | 1.03 MiB |
 | `weak-value-map` 1.0.1 | 20,000 / 20,000 | opaque | 24 B | **0.07 MiB** |
 
-The honest read: this package eliminates JavaScript-visible dead shells. Its
-per-entry `FinalizationRegistry` bookkeeping leaves a larger V8 heap high-water
-delta than the native weak-value add-on, and `IterableWeakMap`'s delta is
-slightly larger than the leaking incumbent's at this scale even though its
-reachable shell graph is empty. Shell freedom is the guarantee; minimal V8
-registry capacity is not.
+The receipt shows that this package eliminates JavaScript-visible dead shells.
+Its per-entry `FinalizationRegistry` bookkeeping leaves a larger V8 heap
+high-water delta than the native weak-value add-on, and `IterableWeakMap`'s
+delta is slightly larger than the leaking incumbent's at this scale even
+though its reachable shell graph is empty. Shell freedom is the guarantee;
+minimal V8 registry capacity is not.
 
 ## Throughput receipts
 
