@@ -134,10 +134,9 @@ registered, and well-known symbols are all valid there.
 ### 5. Zero runtime dependencies
 
 The shipped code uses only `WeakRef`, `WeakMap`, `WeakSet`-family semantics,
-`Map`, `Set`, and `FinalizationRegistry`. Benchmark and receipt packages are
-development-only. `heap-estimate` is temporarily a `file:../heap-estimate`
-devDependency; TODO after its npm release: replace it with `^0.1.0` before
-publishing this package.
+`Map`, `Set`, and `FinalizationRegistry`. Benchmark and measurement packages,
+including the registry-pinned `heap-estimate` development dependency, are not
+part of the published runtime graph.
 
 ## Why finalization rather than traversal alone
 

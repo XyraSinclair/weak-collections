@@ -50,7 +50,7 @@
     "devDependencies": {
         "@types/node": "^24.0.0",
         "cyclebench": "^0.1.0",
-        "heap-estimate": "file:../heap-estimate",
+        "heap-estimate": "^0.1.0",
         "iterable-weak-map": "^1.0.0",
         "iterable-weak-set": "^1.0.4",
         "typescript": "^5.5.0",
