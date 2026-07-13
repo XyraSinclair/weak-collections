@@ -15,6 +15,10 @@
     ],
     "license": "MIT",
     "author": "Xyra Sinclair",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/XyraSinclair/weak-collections.git"
+    },
     "type": "module",
     "sideEffects": false,
     "exports": {
@@ -39,7 +43,9 @@
         "test": "vitest run",
         "bench": "npm run build && BENCH=1 vitest run src/collections.bench.test.ts && npm run probe",
         "probe": "npm run build && node --expose-gc probes/retention.mjs",
-        "prepack": "npm run build"
+        "prepack": "npm run build",
+        "release": "npm publish --access public",
+        "prepublishOnly": "npm run test && npm run build"
     },
     "devDependencies": {
         "@types/node": "^24.0.0",
